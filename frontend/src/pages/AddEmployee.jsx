@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom"; // Changed useHistory to useNavigate
+import { useNavigate } from "react-router-dom";
 import { addEmployee } from "../api/employeeApi";
 
 const AddEmployee = () => {
@@ -9,7 +9,7 @@ const AddEmployee = () => {
   const [subjects, setSubjects] = useState([]);
   const [attendance, setAttendance] = useState("");
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Updated to useNavigate
+  const navigate = useNavigate();
 
   const handleAddEmployee = async (e) => {
     e.preventDefault();

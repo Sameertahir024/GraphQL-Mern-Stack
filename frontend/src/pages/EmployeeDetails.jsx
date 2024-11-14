@@ -1,19 +1,19 @@
 // src/pages/EmployeeDetail.js
 import { useState, useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import { fetchEmployee } from "../api/employeeApi"; // Import API function
+import { fetchEmployee } from "../api/employeeApi";
 
 const EmployeeDetail = () => {
   const { id } = useParams();
   const [employee, setEmployee] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const navigate = useNavigate(); // Updated to useNavigate
+  const navigate = useNavigate();
 
   useEffect(() => {
     const loadEmployee = async () => {
       try {
-        const employeeData = await fetchEmployee(id); // Fetch employee details by ID
+        const employeeData = await fetchEmployee(id);
         setEmployee(employeeData);
         setLoading(false);
       } catch (error) {
