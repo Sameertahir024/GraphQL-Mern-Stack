@@ -109,7 +109,7 @@ const UpdateEmployee = () => {
         </div>
         <button
           type="submit"
-          className="w-full bg-blue-500 text-white py-2 rounded-md"
+          className="w-full bg-black text-white py-2 rounded-md"
         >
           Update Employee
         </button>

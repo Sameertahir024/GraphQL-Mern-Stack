@@ -32,7 +32,7 @@ const EmployeeDetail = () => {
     <div className="p-6">
       <button
         onClick={() => navigate("/")}
-        className="px-4 py-2 bg-green-500 text-white rounded-md mb-4"
+        className="px-4 py-2 bg-black text-white rounded-md mb-4"
       >
         Back to List
       </button>

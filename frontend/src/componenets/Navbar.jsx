@@ -4,8 +4,10 @@ const Navbar = () => {
   return (
     <nav className="border bg-white border-black rounded-full m-3 py-3 px-10 shadow-lg sticky top-3">
       <div className="container mx-auto text-black flex justify-between items-center">
-        <h1 className="text-xl font-semibold">Employee Management</h1>
-        <div className="space-x-10">
+        <h1 className="text-xl hidden md:flex font-semibold">
+          Employee Management
+        </h1>
+        <div className="flex items-center justify-center gap-10">
           <Link to="/" className="">
             Home
           </Link>
