@@ -32,11 +32,11 @@ export const GET_EMPLOYEE = gql`
 // Function to fetch employees data
 export const fetchEmployees = async (limit) => {
   try {
-    const { data } = await client.query({
+    const res = await client.query({
       query: GET_EMPLOYEES,
       variables: { limit },
     });
-    return data.employees;
+    return res?.data.employees;
   } catch (error) {
     console.error("Error fetching employees:", error);
     throw error;
@@ -46,11 +46,11 @@ export const fetchEmployees = async (limit) => {
 // Function to fetch a single employee by ID
 export const fetchEmployee = async (id) => {
   try {
-    const { data } = await client.query({
+    const res = await client.query({
       query: GET_EMPLOYEE,
       variables: { id },
     });
-    return data.employee;
+    return res?.data?.employee;
   } catch (error) {
     console.error("Error fetching employee:", error);
     throw error;
@@ -113,12 +113,12 @@ const ADD_EMPLOYEE = gql`
 // Function to add a new employee
 export const addEmployee = async (employeeData) => {
   try {
-    const { data } = await client.mutate({
+    const res = await client.mutate({
       mutation: ADD_EMPLOYEE,
       variables: employeeData,
     });
-    console.log("data", data);
-    return data.addEmployee;
+    console.log("data", res);
+    return res?.data?.addEmployee;
   } catch (error) {
     console.error("Error adding employee:", error);
     throw error;
@@ -132,7 +132,7 @@ export const updateEmployee = async (employeeData) => {
       mutation: UPDATE_EMPLOYEE,
       variables: employeeData,
     });
-    return data.updateEmployee;
+    return data?.updateEmployee;
   } catch (error) {
     console.error("Error updating employee:", error);
     throw error;

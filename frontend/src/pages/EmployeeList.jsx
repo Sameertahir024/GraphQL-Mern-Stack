@@ -50,7 +50,7 @@ const EmployeeList = () => {
         all employee{" "}
       </h1>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 p-8">
-        {employees.map((employee) => (
+        {employees?.map((employee) => (
           <div
             className="cursor-pointer border border-black p-4 rounded-lg shadow-md"
             key={employee.id}

@@ -13,7 +13,6 @@ const AddEmployee = () => {
 
   const handleAddEmployee = async (e) => {
     e.preventDefault();
-
     try {
       const employeeData = {
         name,
@@ -23,7 +22,8 @@ const AddEmployee = () => {
         attendance: parseInt(attendance),
       };
       const addedEmployee = await addEmployee(employeeData);
-      navigate(`/employee/${addedEmployee.id}`); // Updated to use navigate
+      console.log(addEmployee);
+      navigate(`/employee/${addedEmployee.id}`);
     } catch (error) {
       setError(`Failed to add employee.${error}`);
     }
