@@ -26,8 +26,6 @@ app.get("/", (req, res) => {
 });
 
 startServer();
-// app.listen(PORT, () => {
-//   console.log(`server is running on ${PORT} `);
-// });
-
-export default app;
+app.listen(PORT, () => {
+  console.log(`server is running on ${PORT} `);
+});
