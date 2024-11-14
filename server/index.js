@@ -21,6 +21,9 @@ const startServer = async () => {
   await server.start();
   app.use("/graphql", expressMiddleware(server));
 };
+app.get("/", (req, res) => {
+  res.json({ "server is running": true });
+});
 
 startServer();
 app.listen(PORT, () => {
